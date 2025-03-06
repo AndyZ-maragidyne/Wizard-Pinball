@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxbae4jdo88x"]
+
+[ext_resource type="Texture2D" uid="uid://b1kgh610lwfrn" path="res://Circle_-_black_simple (1).png" id="1_7hrm2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rkbpq"]
+radius = 34.0147
+
+[node name="RigidBody2D" type="RigidBody2D"]
+continuous_cd = 1
+
+[node name="Circle-BlackSimple(1)" type="Sprite2D" parent="."]
+position = Vector2(681, 575)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_7hrm2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(681, 575)
+shape = SubResource("CircleShape2D_rkbpq")

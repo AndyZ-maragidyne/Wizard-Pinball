@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv3q716hdd784"]
+
+[ext_resource type="PackedScene" uid="uid://bxbae4jdo88x" path="res://ball.tscn" id="1_m3r6m"]
+[ext_resource type="PackedScene" uid="uid://ddoamvmbk0sw3" path="res://peg.tscn" id="2_h2rpi"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("1_m3r6m")]
+position = Vector2(-106, -522)
+
+[node name="pegs" type="Node" parent="."]
+
+[node name="StaticBody2D" parent="pegs" instance=ExtResource("2_h2rpi")]
+position = Vector2(-27, -54)
+
+[node name="StaticBody2D2" parent="pegs" instance=ExtResource("2_h2rpi")]
+position = Vector2(-132, 73)
+
+[node name="StaticBody2D3" parent="pegs" instance=ExtResource("2_h2rpi")]
+position = Vector2(64, 74)
+
+[node name="StaticBody2D4" parent="pegs" instance=ExtResource("2_h2rpi")]
+position = Vector2(-151, -110)
+
+[node name="StaticBody2D5" parent="pegs" instance=ExtResource("2_h2rpi")]
+position = Vector2(78, -144)

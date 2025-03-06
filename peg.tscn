@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddoamvmbk0sw3"]
+
+[ext_resource type="Texture2D" uid="uid://b1kgh610lwfrn" path="res://Circle_-_black_simple (1).png" id="1_6kuov"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_khk04"]
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w4i45"]
+radius = 34.0147
+
+[node name="StaticBody2D" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_khk04")
+
+[node name="Circle-BlackSimple(1)" type="Sprite2D" parent="."]
+position = Vector2(604, 487)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_6kuov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(604, 487)
+shape = SubResource("CircleShape2D_w4i45")
