@@ -1,16 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxbae4jdo88x"]
+[gd_scene load_steps=4 format=3 uid="uid://bxbae4jdo88x"]
 
 [ext_resource type="Texture2D" uid="uid://b1kgh610lwfrn" path="res://Circle_-_black_simple (1).png" id="1_7hrm2"]
+[ext_resource type="Script" path="res://ball.gd" id="1_f23dk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rkbpq"]
-radius = 34.0147
+radius = 17.2627
 
 [node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
 continuous_cd = 1
+script = ExtResource("1_f23dk")
 
 [node name="Circle-BlackSimple(1)" type="Sprite2D" parent="."]
 position = Vector2(681, 575)
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_7hrm2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
