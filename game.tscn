@@ -1,18 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://bv3q716hdd784"]
+[gd_scene load_steps=12 format=3 uid="uid://bv3q716hdd784"]
 
 [ext_resource type="PackedScene" uid="uid://bxbae4jdo88x" path="res://ball.tscn" id="1_m3r6m"]
 [ext_resource type="PackedScene" uid="uid://ddoamvmbk0sw3" path="res://peg.tscn" id="2_h2rpi"]
 [ext_resource type="Texture2D" uid="uid://b7xc1sd3q24wm" path="res://7ccb010d8fddc4bcd84587ef3c34d100.png" id="3_ajkc5"]
+[ext_resource type="PackedScene" uid="uid://bk8ybnnkpoyno" path="res://gold_peg.tscn" id="3_vp7va"]
 [ext_resource type="Script" path="res://manager.gd" id="4_aqfp3"]
+[ext_resource type="Script" path="res://walls.gd" id="4_smpm3"]
 [ext_resource type="FontFile" uid="uid://q2fqiyjs0ege" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection_ii/ConnectionII.otf" id="5_ep12o"]
+[ext_resource type="Shape2D" uid="uid://bcxg202ro4t47" path="res://wallboundary.tres" id="5_kavh5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cvssc"]
 bounce = 1.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1730l"]
-size = Vector2(228.5, 1677)
-
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8r004"]
+rough = true
 bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iprha"]
@@ -22,125 +23,173 @@ size = Vector2(1200.5, 139)
 position = Vector2(300, 0)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("1_m3r6m")]
-position = Vector2(160, -540)
+position = Vector2(1014.13, 88.8062)
 
 [node name="pegs" type="Node" parent="."]
 
 [node name="StaticBody2D17" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(974, -143)
+position = Vector2(1728.13, 542.806)
 
 [node name="StaticBody2D16" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(665, 16)
+position = Vector2(1419.13, 701.806)
 
 [node name="StaticBody2D15" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(889, -29)
+position = Vector2(1643.13, 656.806)
 
 [node name="StaticBody2D7" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(701, -89)
+position = Vector2(1455.13, 596.806)
 
 [node name="StaticBody2D6" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(199, -43)
+position = Vector2(1159.13, 456.806)
 
 [node name="StaticBody2D" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(288, 94)
+position = Vector2(1122.13, 646.806)
 
 [node name="StaticBody2D2" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(148, 101)
+position = Vector2(1125.13, 739.806)
 
 [node name="StaticBody2D3" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(364, 74)
+position = Vector2(1308.13, 701.806)
 
 [node name="StaticBody2D4" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(172, -178)
+position = Vector2(1132.13, 321.806)
 
 [node name="StaticBody2D5" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(378, -144)
+position = Vector2(1338.13, 355.806)
 
 [node name="StaticBody2D8" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(506, 105)
+position = Vector2(1260.13, 593.806)
 
 [node name="StaticBody2D9" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(468, -16)
+position = Vector2(1091.13, 512.806)
 
 [node name="StaticBody2D10" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(324, -18)
+position = Vector2(1265.13, 494.806)
 
 [node name="StaticBody2D11" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(279, -128)
+position = Vector2(1239.13, 371.806)
 
 [node name="StaticBody2D12" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(379, -73)
+position = Vector2(1339.13, 426.806)
 
 [node name="StaticBody2D13" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(568, -46)
+position = Vector2(1528.13, 453.806)
 
 [node name="StaticBody2D14" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(481, -132)
+position = Vector2(1441.13, 367.806)
 
 [node name="StaticBody2D18" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(775, -10)
+position = Vector2(1529.13, 675.806)
 
 [node name="StaticBody2D19" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(722, 101)
+position = Vector2(1476.13, 786.806)
 
 [node name="StaticBody2D20" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(570, 71)
+position = Vector2(1361.13, 546.806)
 
 [node name="StaticBody2D21" parent="pegs" instance=ExtResource("2_h2rpi")]
-position = Vector2(345, 179)
+position = Vector2(1179.13, 731.806)
+
+[node name="StaticBody2D22" parent="pegs" instance=ExtResource("3_vp7va")]
+position = Vector2(1379, 304)
 
 [node name="Walls" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+[node name="Area2D" type="Area2D" parent="Walls"]
+script = ExtResource("4_smpm3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Area2D"]
+position = Vector2(680, 861)
+shape = ExtResource("5_kavh5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/Area2D"]
+position = Vector2(1563, 842)
+shape = ExtResource("5_kavh5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls/Area2D"]
 physics_material_override = SubResource("PhysicsMaterial_cvssc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D"]
-position = Vector2(186.75, 834.5)
-shape = SubResource("RectangleShape2D_1730l")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Area2D/StaticBody2D"]
+visible = false
+position = Vector2(675.125, 855.806)
+shape = ExtResource("5_kavh5")
 
-[node name="7Ccb010d8Fddc4Bcd84587Ef3c34d100" type="Sprite2D" parent="Walls/StaticBody2D"]
-position = Vector2(187, 543.613)
-scale = Vector2(0.308424, 0.835799)
+[node name="7Ccb010d8Fddc4Bcd84587Ef3c34d100" type="Sprite2D" parent="Walls/Area2D/StaticBody2D"]
+position = Vector2(674.125, 572.806)
+scale = Vector2(0.130774, 0.799398)
 texture = ExtResource("3_ajkc5")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Walls/Area2D"]
 physics_material_override = SubResource("PhysicsMaterial_8r004")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1496, 787)
-shape = SubResource("RectangleShape2D_1730l")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Area2D/StaticBody2D2"]
+visible = false
+position = Vector2(1564.75, 860.612)
+shape = ExtResource("5_kavh5")
 
-[node name="7Ccb010d8Fddc4Bcd84587Ef3c34d100" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(1498, 547)
-scale = Vector2(0.308424, 0.835799)
+[node name="7Ccb010d8Fddc4Bcd84587Ef3c34d100" type="Sprite2D" parent="Walls/Area2D/StaticBody2D2"]
+position = Vector2(1565.75, 586.613)
+scale = Vector2(0.137908, 0.835799)
 texture = ExtResource("3_ajkc5")
 
 [node name="Manager" type="Node2D" parent="."]
 script = ExtResource("4_aqfp3")
 
+[node name="BallButton" type="Button" parent="Manager"]
+offset_left = -262.0
+offset_top = 658.0
+offset_right = 93.0
+offset_bottom = 816.0
+theme_override_fonts/font = ExtResource("5_ep12o")
+theme_override_font_sizes/font_size = 75
+text = "1x Ball 
+$1"
+
+[node name="MoneyLabel" type="Label" parent="Manager"]
+offset_left = -302.0
+offset_top = 165.0
+offset_right = 54.0
+offset_bottom = 362.0
+theme_override_fonts/font = ExtResource("5_ep12o")
+theme_override_font_sizes/font_size = 75
+text = "$
+"
+
 [node name="DamageLabel" type="Label" parent="Manager"]
-offset_left = -288.0
-offset_top = 197.0
-offset_right = 64.0
-offset_bottom = 328.0
+offset_left = -295.0
+offset_top = 21.0
+offset_right = 57.0
+offset_bottom = 152.0
 theme_override_fonts/font = ExtResource("5_ep12o")
 theme_override_font_sizes/font_size = 75
 text = "Damage:"
 
 [node name="BallLabel" type="Label" parent="Manager"]
-offset_left = -287.0
-offset_top = 612.0
-offset_right = 69.0
-offset_bottom = 809.0
+offset_left = -301.0
+offset_top = 343.0
+offset_right = 55.0
+offset_bottom = 540.0
 theme_override_fonts/font = ExtResource("5_ep12o")
 theme_override_font_sizes/font_size = 75
 text = "Balls:"
 
 [node name="Deadzone" type="Area2D" parent="Manager"]
+position = Vector2(30, 26)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Manager/Deadzone"]
-position = Vector2(874, 1522)
+position = Vector2(1081, 1551)
 shape = SubResource("RectangleShape2D_iprha")
 
+[node name="Label" type="Label" parent="."]
+offset_left = -270.0
+offset_top = 552.0
+offset_right = 98.0
+offset_bottom = 667.0
+theme_override_fonts/font = ExtResource("5_ep12o")
+theme_override_font_sizes/font_size = 75
+text = "Shop"
+
+[connection signal="body_entered" from="Walls/Area2D" to="Walls/Area2D" method="_on_body_entered"]
+[connection signal="pressed" from="Manager/BallButton" to="Manager" method="_on_button_pressed"]
 [connection signal="area_entered" from="Manager/Deadzone" to="Manager" method="_on_deadzone_area_entered"]
 [connection signal="body_entered" from="Manager/Deadzone" to="Manager" method="_on_deadzone_body_entered"]

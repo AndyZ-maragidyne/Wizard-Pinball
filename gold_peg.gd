@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+@export var value = 10
 @onready var manager = get_node("/root/Node2D/Manager")
 
 # Called when the node enters the scene tree for the first time.
@@ -14,9 +15,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body) -> void:
 	if body is RigidBody2D:
-		manager.increaseDamage(10)
-		
-		
+		manager.increaseCoins(value)
 		var ball = body as RigidBody2D
 		var direction = (ball.global_transform.origin - global_transform.origin).normalized()
 		var force = 100

@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddoamvmbk0sw3"]
+[gd_scene load_steps=6 format=3 uid="uid://bk8ybnnkpoyno"]
 
-[ext_resource type="Texture2D" uid="uid://b1kgh610lwfrn" path="res://Circle_-_black_simple (1).png" id="1_6kuov"]
-[ext_resource type="Script" path="res://peg.gd" id="1_ume3k"]
+[ext_resource type="Script" path="res://gold_peg.gd" id="1_cwtv7"]
+[ext_resource type="Texture2D" uid="uid://ckkc2y7jxokfa" path="res://gold peg.png" id="2_potcq"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_khk04"]
 bounce = 1.0
@@ -14,12 +14,12 @@ radius = 8.06226
 
 [node name="StaticBody2D" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_khk04")
-script = ExtResource("1_ume3k")
+script = ExtResource("1_cwtv7")
 
 [node name="Circle-BlackSimple(1)" type="Sprite2D" parent="."]
 position = Vector2(-5.96046e-08, -1.19209e-07)
 scale = Vector2(0.025, 0.025)
-texture = ExtResource("1_6kuov")
+texture = ExtResource("2_potcq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_w4i45")

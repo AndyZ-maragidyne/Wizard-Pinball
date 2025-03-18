@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://ball.gd" id="1_f23dk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rkbpq"]
-radius = 17.2627
+radius = 8.0
 
 [node name="RigidBody2D" type="RigidBody2D"]
 gravity_scale = 0.0
@@ -12,10 +12,14 @@ continuous_cd = 1
 script = ExtResource("1_f23dk")
 
 [node name="Circle-BlackSimple(1)" type="Sprite2D" parent="."]
-position = Vector2(681, 575)
-scale = Vector2(0.05, 0.05)
+position = Vector2(-5.42101e-20, 5.96046e-08)
+scale = Vector2(0.025, 0.025)
 texture = ExtResource("1_7hrm2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(681, 575)
 shape = SubResource("CircleShape2D_rkbpq")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 0, -50)
+width = 3.0
+default_color = Color(1, 0.215686, 1, 1)
